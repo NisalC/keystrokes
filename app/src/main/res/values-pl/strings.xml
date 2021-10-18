@@ -1,0 +1,60 @@
+<resources>
+    <!-- Login and signup views -->
+    <string name="app_name">Keystroke Dynamics</string>
+    <string name="signup">Nie masz jeszcze konta? Załóż je!</string>
+    <string name="signup_button">Załóż konto</string>
+    <string name="login_button">Zaloguj się</string>
+    <string name="login">Posiadasz konto? Zaloguj się!</string>
+    <string name="pass_hint">Hasło</string>
+    <string name="email_hint">Email</string>
+    <string name="username_hint">Nazwa użytkownika</string>
+    <string name="registration_text">Rejestracja</string>
+    <string name="login_text">Logowanie</string>
+    <string name="github">github.com/michasacuer</string>
+
+    <!-- Signup validation -->
+    <string name="nameValidation">Minimum 3 znaki!</string>
+    <string name="passwordValidation">Hasło musi zawierać minimum 4 znaki!</string>
+    <string name="emailValidation">Wprowadź poprawny adres Email!</string>
+
+    <!-- Signup registration -->
+    <string name="subject">Keystrok Dynamics - Rejestracja</string>
+    <string name="welcome">Witaj nowy użytkowniku! Tu są twoje dane:</string>
+    <string name="signup_succed">Zarejestrowano nowego użytkownika!</string>
+    <string name="signup_error">Błąd przy rejestracji!</string>
+
+    <!-- Login Validation -->
+    <string name="login_succed">Witaj ponownie!</string>
+    <string name="login_error">Niepoprawne dane logowania!</string>
+
+    <!-- Main Activity -->
+    <string name="floating_btn_addmeasure">Dodaj pomiar</string>
+    <string name="floating_btn_classification">Klasyfikacja</string>
+    <string name="navigation_drawer_open">Otwórz menu</string>
+    <string name="navigation_drawer_close">Zamknij menu</string>
+    <string name="logout">Wylogowywanie...</string>
+    <string name="user">Użytkownik:</string>
+
+    <!-- Add Measure Activity -->
+    <string name="measure_string">9RJhl6a0n</string>
+    <string name="measure_instruction">Wprowadź poniższy teskst:</string>
+    <string name="measure_labelhint">Wprowadź tekst tutaj</string>
+    <string name="measure_acceptbutton">Akceptuj</string>
+    <string name="measure_cancelbutton">Anuluj</string>
+
+    <!-- Navbar -->
+    <string name="nav_logout">Wyloguj się</string>
+    <string name="nav_info">Informacje</string>
+
+    <!-- Progres dialog -->
+    <string name="communicate">Proszę czekać...</string>
+
+    <!-- Expandable list -->
+    <string name="measure">Pomiar</string>
+
+    <!-- Info Dialog -->
+    <string name="keystroke">Keystroke Dynamics</string>
+    <string name="information">Informacje</string>
+    <string name="content">Aplikacja rozpoznająca użytkownika po prędkości pisania (realese time).</string>
+    <string name="classification_content">Sklasyfikowany użytkownik to: </string>
+</resources>
