@@ -1,3 +1,5 @@
+import 'dart:html';
+
 import 'package:flutter/material.dart';
 import 'package:flutterfbauth/services/authservice.dart';
 import 'package:flutterfbauth/alert_page.dart';
@@ -11,14 +13,11 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-      Text('You are logged in'),
-      // ElevatedButton(
-      //     onPressed: () {
-      //
-      //     },
-      // child: Center(child: Text('LOG OUT')))
-      Drawer(
+      appBar: AppBar(
+        title: Text('Biometrics'),
+        backgroundColor: Colors.green,
+      ),
+      drawer: Drawer(
         child: ListView(
           // Important: Remove any padding from the ListView.
           padding: EdgeInsets.zero,
@@ -44,6 +43,6 @@ class _HomePageState extends State<HomePage> {
           ],
         ),
       ),
-    ]));
+    );
   }
 }
