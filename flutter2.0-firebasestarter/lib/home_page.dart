@@ -12,6 +12,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
+    final profil_name = "Nisal C"; // Replace with backend call
     return Scaffold(
       appBar: AppBar(
         title: Text('Biometrics'),
@@ -26,7 +27,7 @@ class _HomePageState extends State<HomePage> {
               decoration: BoxDecoration(
                 color: Colors.green,
               ),
-              child: Text('Behavioral Biometrics'),
+              child: Text('Nisal C'),
             ),
             ListTile(
               title: const Text('Sign Out'),
