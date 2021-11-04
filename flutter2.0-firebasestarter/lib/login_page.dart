@@ -157,11 +157,11 @@ class _LoginPageState extends State<LoginPage> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Center(
-                          child: ImageIcon(AssetImage('assets/facebook.png'),
+                          child: ImageIcon(AssetImage('assets/google.png'),
                               size: 15.0)),
                       SizedBox(width: 10.0),
                       Center(
-                          child: Text('Login with facebook',
+                          child: Text('Login with Google',
                               style: TextStyle(fontFamily: 'Trueno'))),
                     ],
                   ),
@@ -169,7 +169,7 @@ class _LoginPageState extends State<LoginPage> {
           ),
           SizedBox(height: 25.0),
           Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-            Text('New to Spotify ?'),
+            Text('New to Biometrics ?'),
             SizedBox(width: 5.0),
             InkWell(
                 onTap: () {
