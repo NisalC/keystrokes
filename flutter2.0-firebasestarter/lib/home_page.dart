@@ -12,11 +12,11 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
         body: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
       Text('You are logged in'),
-      ElevatedButton(
-          onPressed: () {
-            AuthService().signOut();
-          },
-          child: Center(child: Text('LOG OUT')))
+      // ElevatedButton(
+      //     onPressed: () {
+      //       AuthService().signOut();
+      //     },
+      // child: Center(child: Text('LOG OUT')))
     ]));
   }
 }
