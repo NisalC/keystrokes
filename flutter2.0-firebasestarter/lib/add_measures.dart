@@ -5,12 +5,12 @@ import 'package:flutter/material.dart';
 import 'package:flutterfbauth/services/authservice.dart';
 import 'package:flutterfbauth/alert_page.dart';
 
-class HomePage extends StatefulWidget {
+class AddMeasures extends StatefulWidget {
   @override
-  _HomePageState createState() => _HomePageState();
+  _AddMeasuresState createState() => _AddMeasuresState();
 }
 
-class _HomePageState extends State<HomePage>
+class _AddMeasuresState extends State<AddMeasures>
     with SingleTickerProviderStateMixin {
   bool isOpened = false;
   AnimationController _animationController;
@@ -132,9 +132,8 @@ class _HomePageState extends State<HomePage>
 
   @override
   Widget build(BuildContext context) {
-    final _profil_name = "Nisal C"; // Replace with backend call
-    var _user_name = ''; // update this with the updated one from the backend
-    return Scaffold(
+    // TODO: implement build
+    return new Scaffold(
       appBar: AppBar(
         title: Text('Biometrics'),
         backgroundColor: Colors.green,
@@ -166,20 +165,7 @@ class _HomePageState extends State<HomePage>
         ),
       ),
       body: new ListView(
-        children: <Widget>[
-          Text(
-            'ID 01',
-            style: const TextStyle(fontWeight: FontWeight.bold),
-          ),
-          Text(
-              '$_user_name'), // add the names from the backend to teh second text widget
-          Text(
-            'ID 02',
-            style: const TextStyle(fontWeight: FontWeight.bold),
-          ),
-          Text('User: $_user_name'),
-          MyDynamicListView(),
-        ],
+        children: <Widget>[],
       ),
       floatingActionButton: Column(
         mainAxisAlignment: MainAxisAlignment.end,
@@ -208,24 +194,5 @@ class _HomePageState extends State<HomePage>
         ],
       ),
     );
-  }
-}
-
-class MyDynamicListView extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    var _item_count =
-        5; // update all these three values with the back end values you get
-    var char_items = [];
-    var char_items_times = [];
-    // TODO: implement build
-    return ListView.builder(
-        itemCount: _item_count,
-        itemBuilder: (context, index) {
-          return GridView.count(crossAxisCount: 2, children: <Widget>[
-            new Text(char_items[index]),
-            new Text(char_items_times[index])
-          ]);
-        });
   }
 }
