@@ -40,6 +40,44 @@ class _HomePageState extends State<HomePage>
         CurvedAnimation(
             parent: _animationController,
             curve: Interval(0.00, 0.75, curve: _curve)));
+
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    _animationController.dispose();
+    super.dispose();
+  }
+
+  Widget buttonAdd() {
+    return Container(
+      child: FloatingActionButton(
+        onPressed: () {},
+        tooltip: 'Open for add Configurations',
+        child: Icon(Icons.add),
+      ),
+    );
+  }
+
+  Widget buttonClassification() {
+    return Container(
+      child: FloatingActionButton(
+        onPressed: () {},
+        tooltip: 'Classifications',
+        child: Icon(Icons.assessment),
+      ),
+    );
+  }
+
+  Widget buttonAddMeasures() {
+    return Container(
+      child: FloatingActionButton(
+        onPressed: () {},
+        tooltip: 'Add Measures',
+        child: Icon(Icons.dashboard_customize),
+      ),
+    );
   }
 
   @override
