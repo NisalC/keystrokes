@@ -12,7 +12,8 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    final profil_name = "Nisal C"; // Replace with backend call
+    final _profil_name = "Nisal C"; // Replace with backend call
+    var _user_name = ''; // update this with the updated one from the backend
     return Scaffold(
       appBar: AppBar(
         title: Text('Biometrics'),
@@ -43,6 +44,21 @@ class _HomePageState extends State<HomePage> {
             ),
           ],
         ),
+      ),
+      body: new ListView(
+        children: <Widget>[
+          Text(
+            'ID 01',
+            style: const TextStyle(fontWeight: FontWeight.bold),
+          ),
+          Text(
+              '$_user_name'), // add the names from the backend to teh second text widget
+          Text(
+            'ID 02',
+            style: const TextStyle(fontWeight: FontWeight.bold),
+          ),
+          Text('User: $_user_name'),
+        ],
       ),
     );
   }
