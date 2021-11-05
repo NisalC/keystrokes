@@ -58,8 +58,28 @@ class _HomePageState extends State<HomePage> {
             style: const TextStyle(fontWeight: FontWeight.bold),
           ),
           Text('User: $_user_name'),
+          MyDynamicListView(),
         ],
       ),
     );
+  }
+}
+
+class MyDynamicListView extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    var _item_count =
+        5; // update all these three values with the back end values you get
+    var char_items = [];
+    var char_items_times = [];
+    // TODO: implement build
+    return ListView.builder(
+        itemCount: _item_count,
+        itemBuilder: (context, index) {
+          return GridView.count(crossAxisCount: 2, children: <Widget>[
+            new Text(char_items[index]),
+            new Text(char_items_times[index])
+          ]);
+        });
   }
 }
