@@ -1,5 +1,6 @@
 import 'dart:html';
 
+import 'package:flutter/animation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutterfbauth/services/authservice.dart';
 import 'package:flutterfbauth/alert_page.dart';
@@ -9,9 +10,17 @@ class HomePage extends StatefulWidget {
   _HomePageState createState() => _HomePageState();
 }
 
+class _HomePageState extends State<HomePage>
+    with SingleTickerProviderStateMixin {
 
-
-class _HomePageState extends State<HomePage> {
+  bool isOpen = false;
+  AnimationController _animationController;
+  Animation<Color> _buttonColor;
+  Animation<double> animationIcon;
+  Animation<double> _translateButton;
+  Curve _curve = Curves.easeOut;
+  double _fabHeight = 56.0;
+  
   @override
   Widget build(BuildContext context) {
     final _profil_name = "Nisal C"; // Replace with backend call
@@ -63,14 +72,15 @@ class _HomePageState extends State<HomePage> {
           MyDynamicListView(),
         ],
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        tooltip: 'Classification',
-        child: Icon(Icons.add),
-        backgroundColor: Colors.green,
-        foregroundColor: Colors.white,
-        mini: true,
-        highlightElevation: 20.0,
+      floatingActionButton: Column(
+        mainAxisAlignment: MainAxisAlignment.end,
+        children: <Widget>[
+          Transform(
+            transform: Matrix4.translationValues(
+                0.0, _translateButton.value * 3.0, 0.0),
+            child: buttonAdd(),
+          ),
+        ],
       ),
     );
   }
