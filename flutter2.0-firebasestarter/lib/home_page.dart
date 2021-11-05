@@ -12,7 +12,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage>
     with SingleTickerProviderStateMixin {
-  bool isOpen = false;
+  bool isOpened = false;
   AnimationController _animationController;
   Animation<Color> _buttonColor;
   Animation<double> _animationIcon;
@@ -78,6 +78,25 @@ class _HomePageState extends State<HomePage>
         child: Icon(Icons.dashboard_customize),
       ),
     );
+  }
+
+  Widget buttonToggle() {
+    return Container(
+        child: FloatingActionButton(
+      backgroundColor: _buttonColor.value,
+      onPressed: animate,
+      tooltip: 'Toggle',
+      child: AnimatedIcon(
+        icon: AnimatedIcons.menu_close,
+        progress: _animationIcon,
+      ),
+    ));
+  }
+
+  animate() {
+    if(!isOpened){
+
+    }
   }
 
   @override
