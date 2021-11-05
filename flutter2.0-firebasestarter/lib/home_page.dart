@@ -4,6 +4,7 @@ import 'package:flutter/animation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutterfbauth/services/authservice.dart';
 import 'package:flutterfbauth/alert_page.dart';
+import 'package:flutterfbauth/add_measures.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -74,7 +75,9 @@ class _HomePageState extends State<HomePage>
   Widget buttonAddMeasures() {
     return Container(
       child: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          AddMeasures();
+        },
         tooltip: 'Add Measures',
         child: Icon(Icons.dashboard_customize),
       ),

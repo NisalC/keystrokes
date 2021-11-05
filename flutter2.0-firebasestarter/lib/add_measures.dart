@@ -4,6 +4,7 @@ import 'package:flutter/animation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutterfbauth/services/authservice.dart';
 import 'package:flutterfbauth/alert_page.dart';
+import 'package:flutterfbauth/home_page.dart';
 
 class AddMeasures extends StatefulWidget {
   @override
@@ -20,6 +21,7 @@ class _AddMeasuresState extends State<AddMeasures>
   Curve _curve = Curves.easeOut;
   double _fabHeight = 56.0;
   var _user_name = "";
+  var _random_text = '';
 
   @override
   void initState() {
@@ -165,7 +167,39 @@ class _AddMeasuresState extends State<AddMeasures>
         ),
       ),
       body: new ListView(
-        children: <Widget>[],
+        children: <Widget>[
+          Text('Enter Text Below'),
+          Text('Random text goes here $_random_text'),
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 8, vertical: 16),
+            child: TextField(
+              decoration: InputDecoration(
+                border: OutlineInputBorder(),
+                hintText: 'Enter Above Text Field',
+              ),
+            ),
+          ),
+          TextButton(
+            onPressed: () {},
+            child: Text('Accept'),
+            style: TextButton.styleFrom(
+              primary: Colors.white,
+              backgroundColor: Colors.green,
+              onSurface: Colors.green[900],
+            ),
+          ),
+          TextButton(
+            onPressed: () {
+              HomePage();
+            },
+            child: Text('Cancel'),
+            style: TextButton.styleFrom(
+              primary: Colors.white,
+              backgroundColor: Colors.green,
+              onSurface: Colors.green[900],
+            ),
+          ),
+        ],
       ),
       floatingActionButton: Column(
         mainAxisAlignment: MainAxisAlignment.end,
