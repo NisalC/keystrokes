@@ -9,6 +9,8 @@ class HomePage extends StatefulWidget {
   _HomePageState createState() => _HomePageState();
 }
 
+
+
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
@@ -60,6 +62,15 @@ class _HomePageState extends State<HomePage> {
           Text('User: $_user_name'),
           MyDynamicListView(),
         ],
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        tooltip: 'Classification',
+        child: Icon(Icons.add),
+        backgroundColor: Colors.green,
+        foregroundColor: Colors.white,
+        mini: true,
+        highlightElevation: 20.0,
       ),
     );
   }
