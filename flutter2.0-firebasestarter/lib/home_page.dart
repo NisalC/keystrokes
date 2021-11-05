@@ -94,9 +94,12 @@ class _HomePageState extends State<HomePage>
   }
 
   animate() {
-    if(!isOpened){
-
+    if (!isOpened) {
+      _animationController.forward();
+    } else {
+      _animationController.reverse();
     }
+    isOpened = !isOpened;
   }
 
   @override
@@ -158,6 +161,22 @@ class _HomePageState extends State<HomePage>
                 0.0, _translateButton.value * 3.0, 0.0),
             child: buttonAdd(),
           ),
+          Transform(
+            transform: Matrix4.translationValues(
+                0.0, _translateButton.value * 3.0, 0.0),
+            child: buttonAdd(),
+          ),
+          Transform(
+            transform: Matrix4.translationValues(
+                0.0, _translateButton.value * 3.0, 0.0),
+            child: buttonClassification(),
+          ),
+          Transform(
+            transform: Matrix4.translationValues(
+                0.0, _translateButton.value * 3.0, 0.0),
+            child: buttonAddMeasures(),
+          ),
+          buttonToggle(),
         ],
       ),
     );
