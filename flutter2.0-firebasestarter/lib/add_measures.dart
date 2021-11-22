@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutterfbauth/services/authservice.dart';
 import 'package:flutterfbauth/alert_page.dart';
 import 'package:flutterfbauth/home_page.dart';
-import 'package:flutterfbauth/display_values.dart';
+// import 'package:flutterfbauth/display_values.dart';
 import 'globals.dart' as globals;
 
 class AddMeasures extends StatefulWidget {
@@ -188,7 +188,7 @@ class _AddMeasuresState extends State<AddMeasures>
           TextButton(
             onPressed: () {
               getTheTimeDifference();
-              DisplayValues();
+              HomePage();
             },
             child: Text('Accept'),
             style: TextButton.styleFrom(
