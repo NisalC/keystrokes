@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutterfbauth/services/authservice.dart';
 import 'package:flutterfbauth/alert_page.dart';
 import 'package:flutterfbauth/home_page.dart';
+import 'package:flutterfbauth/display_values.dart';
 import 'globals.dart' as globals;
 
 class AddMeasures extends StatefulWidget {
@@ -136,7 +137,7 @@ class _AddMeasuresState extends State<AddMeasures>
   Widget build(BuildContext context) {
     // ignore: todo
     // TODO: implement build
-    var charArr = [];
+    // var charArr = [];
     return new Scaffold(
       appBar: AppBar(
         title: Text('Biometrics'),
@@ -187,6 +188,7 @@ class _AddMeasuresState extends State<AddMeasures>
           TextButton(
             onPressed: () {
               getTheTimeDifference();
+              DisplayValues();
             },
             child: Text('Accept'),
             style: TextButton.styleFrom(
@@ -252,6 +254,4 @@ void getTheTimeDifference() {
     globals.timeDifference[k] =
         globals.charTimesArray[k + 1] - globals.charTimesArray[k];
   }
-
-  
 }
