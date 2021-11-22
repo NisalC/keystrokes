@@ -1,8 +1,11 @@
 import 'package:flutter/animation.dart';
 import 'package:flutter/material.dart';
+import 'dart:convert';
+
 import 'package:flutterfbauth/services/authservice.dart';
 import 'package:flutterfbauth/alert_page.dart';
 import 'package:flutterfbauth/home_page.dart';
+import 'globals.dart' as globals;
 
 class AddMeasures extends StatefulWidget {
   @override
@@ -134,6 +137,7 @@ class _AddMeasuresState extends State<AddMeasures>
   Widget build(BuildContext context) {
     // ignore: todo
     // TODO: implement build
+    var charArr = [];
     return new Scaffold(
       appBar: AppBar(
         title: Text('Biometrics'),
@@ -172,9 +176,6 @@ class _AddMeasuresState extends State<AddMeasures>
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 8, vertical: 16),
             child: TextField(
-              onTap: () {
-                // findTimeDifference();
-              },
               onChanged: (text) {
                 findTimeDifference(text);
               },
@@ -239,4 +240,7 @@ class _AddMeasuresState extends State<AddMeasures>
 void findTimeDifference(String text) {
   TimeOfDay time = TimeOfDay.now();
   // print('Hi');
+  int i = 0;
+  globals.charArray[i] = text;
+  globals.charTimesArray[i] = time;
 }
