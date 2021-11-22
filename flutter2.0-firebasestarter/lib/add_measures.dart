@@ -1,6 +1,5 @@
 import 'package:flutter/animation.dart';
 import 'package:flutter/material.dart';
-import 'dart:convert';
 
 import 'package:flutterfbauth/services/authservice.dart';
 import 'package:flutterfbauth/alert_page.dart';
