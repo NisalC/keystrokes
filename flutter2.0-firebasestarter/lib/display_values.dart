@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 
 import 'package:flutterfbauth/alert_page.dart';
 import 'package:flutterfbauth/services/authservice.dart';
+import 'globals.dart' as globals;
 
 class DisplayValues extends StatefulWidget {
   @override
@@ -115,7 +116,7 @@ class _DisplayValuesState extends State<DisplayValues>
 
       // Create AlertDialog
       AlertDialog alert = AlertDialog(
-        title: Text("Classified User: $_user_name"),
+        title: Text("Classified User: "+globals.),
         actions: [
           okButton,
         ],
@@ -163,45 +164,8 @@ class _DisplayValuesState extends State<DisplayValues>
         ),
       ),
       body: new ListView(
-        children: <Widget>[
-          Text('Enter Text Below'),
-          Text('Random text goes here $_random_text'),
-          Padding(
-            padding: EdgeInsets.symmetric(horizontal: 8, vertical: 16),
-            child: TextField(
-              onChanged: (text) {
-                findTimeDifference(text);
-              },
-              decoration: InputDecoration(
-                border: OutlineInputBorder(),
-                hintText: 'Enter Above Text Field',
-              ),
-            ),
-          ),
-          TextButton(
-            onPressed: () {
-              getTheTimeDifference();
-              DisplayValues();
-            },
-            child: Text('Accept'),
-            style: TextButton.styleFrom(
-              primary: Colors.white,
-              backgroundColor: Colors.green,
-              onSurface: Colors.green[900],
-            ),
-          ),
-          TextButton(
-            onPressed: () {
-              HomePage();
-            },
-            child: Text('Cancel'),
-            style: TextButton.styleFrom(
-              primary: Colors.white,
-              backgroundColor: Colors.green,
-              onSurface: Colors.green[900],
-            ),
-          ),
-        ],
+        // children:
+  
       ),
       floatingActionButton: Column(
         mainAxisAlignment: MainAxisAlignment.end,
