@@ -1,4 +1,3 @@
-
 import 'package:flutter/animation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutterfbauth/services/authservice.dart';
@@ -173,6 +172,12 @@ class _AddMeasuresState extends State<AddMeasures>
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 8, vertical: 16),
             child: TextField(
+              onTap: () {
+                // findTimeDifference();
+              },
+              onChanged: (text) {
+                findTimeDifference(text);
+              },
               decoration: InputDecoration(
                 border: OutlineInputBorder(),
                 hintText: 'Enter Above Text Field',
@@ -229,4 +234,9 @@ class _AddMeasuresState extends State<AddMeasures>
       ),
     );
   }
+}
+
+void findTimeDifference(String text) {
+  TimeOfDay time = TimeOfDay.now();
+  // print('Hi');
 }
