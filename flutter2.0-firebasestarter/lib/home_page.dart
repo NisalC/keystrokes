@@ -64,7 +64,9 @@ class _HomePageState extends State<HomePage>
   Widget buttonClassification() {
     return Container(
       child: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          MyAlert();
+        },
         tooltip: 'Classifications',
         child: Icon(Icons.assessment),
       ),
@@ -134,7 +136,7 @@ class _HomePageState extends State<HomePage>
 
   @override
   Widget build(BuildContext context) {
-    final _profil_name = "Nisal C"; // Replace with backend call
+    // final _profil_name = "Nisal C"; // Replace with backend call
     var _user_name = ''; // update this with the updated one from the backend
     return Scaffold(
       appBar: AppBar(
@@ -186,16 +188,16 @@ class _HomePageState extends State<HomePage>
       floatingActionButton: Column(
         mainAxisAlignment: MainAxisAlignment.end,
         children: <Widget>[
-          Transform(
-            transform: Matrix4.translationValues(
-                0.0, _translateButton.value * 3.0, 0.0),
-            child: buttonAdd(),
-          ),
-          Transform(
-            transform: Matrix4.translationValues(
-                0.0, _translateButton.value * 3.0, 0.0),
-            child: buttonAdd(),
-          ),
+          // Transform(
+          //   transform: Matrix4.translationValues(
+          //       0.0, _translateButton.value * 3.0, 0.0),
+          //   child: buttonAdd(),
+          // ),
+          // Transform(
+          //   transform: Matrix4.translationValues(
+          //       0.0, _translateButton.value * 3.0, 0.0),
+          //   child: buttonAdd(),
+          // ),
           Transform(
             transform: Matrix4.translationValues(
                 0.0, _translateButton.value * 3.0, 0.0),
