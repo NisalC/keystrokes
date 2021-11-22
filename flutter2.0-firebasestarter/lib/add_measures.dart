@@ -252,4 +252,6 @@ void getTheTimeDifference() {
     globals.timeDifference[k] =
         globals.charTimesArray[k + 1] - globals.charTimesArray[k];
   }
+
+  
 }
