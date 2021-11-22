@@ -1,9 +1,11 @@
-
 import 'package:flutter/animation.dart';
 import 'package:flutter/material.dart';
+
 import 'package:flutterfbauth/services/authservice.dart';
 import 'package:flutterfbauth/alert_page.dart';
 import 'package:flutterfbauth/home_page.dart';
+// import 'package:flutterfbauth/display_values.dart';
+import 'globals.dart' as globals;
 
 class AddMeasures extends StatefulWidget {
   @override
@@ -135,6 +137,7 @@ class _AddMeasuresState extends State<AddMeasures>
   Widget build(BuildContext context) {
     // ignore: todo
     // TODO: implement build
+    // var charArr = [];
     return new Scaffold(
       appBar: AppBar(
         title: Text('Biometrics'),
@@ -173,6 +176,9 @@ class _AddMeasuresState extends State<AddMeasures>
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 8, vertical: 16),
             child: TextField(
+              onChanged: (text) {
+                findTimeDifference(text);
+              },
               decoration: InputDecoration(
                 border: OutlineInputBorder(),
                 hintText: 'Enter Above Text Field',
@@ -180,7 +186,10 @@ class _AddMeasuresState extends State<AddMeasures>
             ),
           ),
           TextButton(
-            onPressed: () {},
+            onPressed: () {
+              getTheTimeDifference();
+              HomePage();
+            },
             child: Text('Accept'),
             style: TextButton.styleFrom(
               primary: Colors.white,
@@ -220,13 +229,29 @@ class _AddMeasuresState extends State<AddMeasures>
             child: buttonClassification(),
           ),
           Transform(
+            child: buttonAddMeasures(),
             transform: Matrix4.translationValues(
                 0.0, _translateButton.value * 3.0, 0.0),
-            child: buttonAddMeasures(),
           ),
           buttonToggle(),
         ],
       ),
     );
+  }
+}
+
+void findTimeDifference(String text) {
+  TimeOfDay time = TimeOfDay.now();
+  // print('Hi');
+  globals.charArray[globals.i] = text;
+  globals.charTimesArray[globals.i] = time;
+  globals.i++;
+}
+
+void getTheTimeDifference() {
+  int j = globals.i;
+  for (var k = 0; k < j - 1; k++) {
+    globals.timeDifference[k] =
+        globals.charTimesArray[k + 1] - globals.charTimesArray[k];
   }
 }
