@@ -225,9 +225,9 @@ class _AddMeasuresState extends State<AddMeasures>
             child: buttonClassification(),
           ),
           Transform(
+            child: buttonAddMeasures(),
             transform: Matrix4.translationValues(
                 0.0, _translateButton.value * 3.0, 0.0),
-            child: buttonAddMeasures(),
           ),
           buttonToggle(),
         ],
