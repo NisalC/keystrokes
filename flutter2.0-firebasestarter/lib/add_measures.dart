@@ -186,7 +186,9 @@ class _AddMeasuresState extends State<AddMeasures>
             ),
           ),
           TextButton(
-            onPressed: () {},
+            onPressed: () {
+              getTheTimeDifference();
+            },
             child: Text('Accept'),
             style: TextButton.styleFrom(
               primary: Colors.white,
@@ -240,7 +242,15 @@ class _AddMeasuresState extends State<AddMeasures>
 void findTimeDifference(String text) {
   TimeOfDay time = TimeOfDay.now();
   // print('Hi');
-  int i = 0;
-  globals.charArray[i] = text;
-  globals.charTimesArray[i] = time;
+  globals.charArray[globals.i] = text;
+  globals.charTimesArray[globals.i] = time;
+  globals.i++;
+}
+
+void getTheTimeDifference() {
+  int j = globals.i;
+  for (var k = 0; k < j - 1; k++) {
+    globals.timeDifference[k] =
+        globals.charTimesArray[k + 1] - globals.charTimesArray[k];
+  }
 }
