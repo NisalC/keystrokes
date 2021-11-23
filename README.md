@@ -2,8 +2,6 @@
 
 ## How to Run the Application
 
-### `flutter pub get`
-
-### `flutter clean`
-
-### `flutter run`
+1. `flutter pub get`
+2. `flutter clean`
+3. `flutter run`
