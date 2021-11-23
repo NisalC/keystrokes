@@ -4,6 +4,7 @@ import 'package:flutterfbauth/services/authservice.dart';
 import 'package:flutterfbauth/alert_page.dart';
 import 'package:flutterfbauth/add_measures.dart';
 import 'package:flutterfbauth/classifdied_page.dart';
+import 'globals.dart' as globals;
 
 class HomePage extends StatefulWidget {
   @override
@@ -225,17 +226,14 @@ class _HomePageState extends State<HomePage>
 class MyDynamicListView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    var _item_count =
-        5; // update all these three values with the back end values you get
-    var char_items = [];
-    var char_items_times = [];
+    var _item_count = globals.charArray.length; 
     // TODO: implement build
     return ListView.builder(
         itemCount: _item_count,
         itemBuilder: (context, index) {
           return GridView.count(crossAxisCount: 2, children: <Widget>[
-            new Text(char_items[index]),
-            new Text(char_items_times[index])
+            new Text(globals.charArray[index]),
+            new Text(globals.timeDifference[index])
           ]);
         });
   }
