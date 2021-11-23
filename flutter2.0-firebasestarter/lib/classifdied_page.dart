@@ -3,14 +3,13 @@ import 'package:flutter/material.dart';
 import 'package:flutterfbauth/services/authservice.dart';
 import 'package:flutterfbauth/alert_page.dart';
 import 'package:flutterfbauth/add_measures.dart';
-import 'package:flutterfbauth/classifdied_page.dart';
 
-class HomePage extends StatefulWidget {
+class ClassifiedPage extends StatefulWidget {
   @override
-  _HomePageState createState() => _HomePageState();
+  _ClassifiedPageState createState() => _ClassifiedPageState();
 }
 
-class _HomePageState extends State<HomePage>
+class _ClassifiedPageState extends State<ClassifiedPage>
     with SingleTickerProviderStateMixin {
   bool isOpened = false;
   AnimationController _animationController;
@@ -65,11 +64,7 @@ class _HomePageState extends State<HomePage>
     return Container(
       child: FloatingActionButton(
         onPressed: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(builder: (context) => ClassifiedPage()),
-          );
-          // MyAlert();
+          MyAlert();
         },
         tooltip: 'Classifications',
         child: Icon(Icons.assessment),
